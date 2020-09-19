@@ -1358,171 +1358,169 @@ h6 {
 }
 
 /*============  blog_banner css  ===========*/
-/*============  blog_details_area css  ===========*/
+/*============  blog_details_area css 
 .blog_details_area {
   padding-bottom: 150px;
   padding-top: 60px;
 }
-
 .blog_single_info {
   padding-right: 100px;
+  .single_post_one,
+  .single_post_two {
+    margin-bottom: 60px;
+  }
+  .single_post_two {
+    margin-top: 30px;
+  }
+  p {
+    margin-bottom: 32px;
+  }
+  blockquote {
+    position: relative;
+    z-index: 1;
+    font-size: 36px;
+    line-height: 53px;
+    font-family: $unna;
+    color: $title;
+    font-weight: 400;
+    padding: 18px 0px 40px 70px;
+    &:before {
+      content: "“";
+      font-family: $unna;
+      font-weight: 700;
+      font-size: 100px;
+      color: #f7f5f9;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 18px;
+      line-height: 80px;
+    }
+    .name {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 500;
+      color: $pcolor;
+      font-family: $red;
+      margin-top: 28px;
+    }
+  }
 }
-.blog_single_info .single_post_one,
-.blog_single_info .single_post_two {
-  margin-bottom: 60px;
-}
-.blog_single_info .single_post_two {
-  margin-top: 30px;
-}
-.blog_single_info p {
-  margin-bottom: 32px;
-}
-.blog_single_info blockquote {
-  position: relative;
-  z-index: 1;
-  font-size: 36px;
-  line-height: 53px;
-  font-family: "Unna", serif;
-  color: #211e26;
-  font-weight: 400;
-  padding: 18px 0px 40px 70px;
-}
-.blog_single_info blockquote:before {
-  content: "“";
-  font-family: "Unna", serif;
-  font-weight: 700;
-  font-size: 100px;
-  color: #f7f5f9;
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 18px;
-  line-height: 80px;
-}
-.blog_single_info blockquote .name {
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: 500;
-  color: #6a6f75;
-  font-family: "Red Hat Display", sans-serif;
-  margin-top: 28px;
-}
-
 .post_share {
   display: flex;
   flex-wrap: wrap;
   font-size: 18px;
-  color: #211e26;
+  color: $title;
   font-weight: 500;
   padding-top: 15px;
-}
-.post_share ul {
-  margin-bottom: 0;
-}
-.post_share ul li {
-  display: inline-block;
-  margin-left: 30px;
-}
-.post_share ul li a {
-  font-size: 14px;
-  color: #6a6f75;
-  transition: color 0.2s linear;
-}
-.post_share ul li a:hover {
-  color: #211e26;
+  ul {
+    margin-bottom: 0;
+    li {
+      display: inline-block;
+      margin-left: 30px;
+      a {
+        font-size: 14px;
+        color: $pcolor;
+        transition: color 0.2s linear;
+        &:hover {
+          color: $title;
+        }
+      }
+    }
+  }
 }
 
 .blog_post_title {
   font-size: 36px;
-  color: #211e26;
+  color: $title;
   margin-bottom: 60px;
 }
-
 .recent_post {
   margin-top: 130px;
+  .recent_blog_item {
+    display: inline-block;
+    width: calc(100% / 2);
+    padding: 0px 65px;
+    img {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 28px;
+      font-family: $red;
+      transition: color 0.2s linear;
+      padding-right: 50px;
+      &:hover {
+        color: $pcolor;
+      }
+    }
+  }
 }
-.recent_post .recent_blog_item {
-  display: inline-block;
-  width: calc(100% / 2);
-  padding: 0px 65px;
-}
-.recent_post .recent_blog_item img {
-  margin-bottom: 20px;
-  margin-top: 0;
-}
-.recent_post .recent_blog_item h3 {
-  font-size: 18px;
-  line-height: 28px;
-  font-family: "Red Hat Display", sans-serif;
-  transition: color 0.2s linear;
-  padding-right: 50px;
-}
-.recent_post .recent_blog_item h3:hover {
-  color: #6a6f75;
-}
-
 .recent_post_info {
   display: flex;
   flex-wrap: wrap;
   margin-left: -65px;
   margin-right: -65px;
 }
-
 .s_comment_list {
   margin-top: 130px;
+  .blog_post_title {
+    margin-bottom: 20px;
+  }
+  .s_comment_list_inner {
+    .s_comment {
+      padding-top: 40px;
+      .media {
+        .c_img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-right: 40px;
+        }
+        .media-body {
+          border-bottom: 1px solid #f7f5f9;
+          padding-bottom: 30px;
+          h3 {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: $red;
+            margin-bottom: 4px;
+          }
+          .date {
+            font-family: $red;
+            font-size: 14px;
+            font-weight: 500;
+            color: #a8aaad;
+          }
+          p {
+            margin-bottom: 0;
+            margin-top: 26px;
+          }
+          a {
+            font-size: 14px;
+            font-weight: 500;
+            color: $title;
+            display: inline-block;
+            margin-top: 25px;
+          }
+        }
+      }
+      .replay_comment {
+        margin-left: 100px;
+        border-bottom: 1px solid #f7f5f9;
+        .media-body {
+          border: 0px;
+        }
+      }
+    }
+  }
 }
-.s_comment_list .blog_post_title {
-  margin-bottom: 20px;
-}
-.s_comment_list .s_comment_list_inner .s_comment {
-  padding-top: 40px;
-}
-.s_comment_list .s_comment_list_inner .s_comment .media .c_img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 40px;
-}
-.s_comment_list .s_comment_list_inner .s_comment .media .media-body {
-  border-bottom: 1px solid #f7f5f9;
-  padding-bottom: 30px;
-}
-.s_comment_list .s_comment_list_inner .s_comment .media .media-body h3 {
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "Red Hat Display", sans-serif;
-  margin-bottom: 4px;
-}
-.s_comment_list .s_comment_list_inner .s_comment .media .media-body .date {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #a8aaad;
-}
-.s_comment_list .s_comment_list_inner .s_comment .media .media-body p {
-  margin-bottom: 0;
-  margin-top: 26px;
-}
-.s_comment_list .s_comment_list_inner .s_comment .media .media-body a {
-  font-size: 14px;
-  font-weight: 500;
-  color: #211e26;
-  display: inline-block;
-  margin-top: 25px;
-}
-.s_comment_list .s_comment_list_inner .s_comment .replay_comment {
-  margin-left: 100px;
-  border-bottom: 1px solid #f7f5f9;
-}
-.s_comment_list .s_comment_list_inner .s_comment .replay_comment .media-body {
-  border: 0px;
-}
-
 .comment_area {
   margin-top: 90px;
 }
 
-/*============  blog_details_area css  ===========*/
+blog_details_area css  ===========*/
 /*============  blog_right_sidebar css  ===========*/
 .sidebar_widget .sidebar_title {
   font-size: 28px;
